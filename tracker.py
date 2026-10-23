@@ -1,6 +1,8 @@
-trades = [{"coin" : "SOL", "buy" : 100, "sell" : 150},
-          {"coin": "BTC", "buy" : 200, "sell" : 175},
-          {"coin": "ETH" , "buy" : 300, "sell" : 400}]
+lines = ["SOL,100,150", "BTC,200,175", "ETH,300,400"]
+trades = []
+for line in lines :
+  parts=line.split(",")
+  trades.append({"coin": parts[0], "buy" : float(parts[1]), "sell" : float(parts[2])})
 x=0
 def percent_change(buy,sell) :
       return (sell-buy)/buy*100
