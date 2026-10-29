@@ -1,4 +1,4 @@
-lines = ["SOL,100,150", "BTC,200,175", "ETH,300,400"]
+lines = open("trades.txt").read().splitlines()
 trades = []
 for line in lines :
   parts=line.split(",")
